@@ -9,16 +9,19 @@ stop_words = get_stop_words('russian')
 
 path = '/home/tozdo/amystem/'
 for papka in os.listdir(path):
+    anum = 0
     for file in os.listdir(path + papka + '/'):
-        f = open(path + papka + '/' + file, 'r', encoding = 'utf-8')
-        text = f.read()
-        documents.append(text) 
-        f.close()
+        if anum < 150:
+            f = open(path + papka + '/' + file, 'r', encoding = 'utf-8')
+            text = f.read()
+            documents.append(text) 
+            f.close()
+            anum += 1
                  
 vectorizer = TfidfVectorizer(stop_words=stop_words)
 X = vectorizer.fit_transform(documents)
 
-num_k = 14 #14 персонажей с количеством анекдотов [97, 168]
+num_k = 11 #11 персонажей 
 model = KMeans(n_clusters=num_k, init='k-means++', max_iter=100)
 model.fit(X)
 order_centroids = model.cluster_centers_.argsort()[:, ::-1]
