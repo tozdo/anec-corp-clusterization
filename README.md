@@ -5,4 +5,4 @@ a_corp.py - создание корпуса анекдотов
 
 a_mystem.py - лемматизация
 
-a_cluster_KM.py - попытки кластеризации методом KMeans
+Методы кластеризации: KMeans, MeanShift, DBSCAN
