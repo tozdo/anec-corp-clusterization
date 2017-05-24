@@ -52,26 +52,19 @@ font = {'family': 'Droid Sans',
 rc('font', **font)
 
 plt.figure(1, figsize=(25, 25))
-#unique_labels = set(labels)
-#colors = plt.cm.Spectral(np.linspace(0, 1, len(unique_labels)))
-#for k, col in zip(unique_labels, colors):
-#    print(k)
-#    print(col)
-#    if k == -1:
-        # Black used for noise.
+
 for name, group in groups:
-    #print(name)
     if name == -1:
         plt.plot(group.x, group.y, 'o', color='k', markersize=6)
-        #continue
     else:
-        plt.plot(group.x, group.y, 'o', markersize=14)
+        plt.plot(group.x, group.y, 'o', markersize=18)
 
 
 #plt.title('Estimated number of clusters: %d' % n_clusters_)
 
-#for i in range(len(df)):
-#    plt.text(df.ix[i]['x'],df.ix[i]['y'], df.ix[i]['title'], size=10)
+for i in range(len(df)):
+    if df.ix[i]['label'] != -1: #не помечаем шум
+        plt.text(df.ix[i]['x'],df.ix[i]['y'], df.ix[i]['title'], size=15)
 
 #plt.show()
-plt.savefig('2clusterohnetext.png', dpi=200)
+plt.savefig('DBSCAN_cluster.png', dpi=200)
