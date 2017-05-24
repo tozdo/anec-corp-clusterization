@@ -62,8 +62,8 @@ plt.figure(1, figsize=(25, 25))
 for name, group in groups:
     #print(name)
     if name == -1:
-        #plt.plot(group.x, group.y, 'o', color='k', markersize=6)
-        continue
+        plt.plot(group.x, group.y, 'o', color='k', markersize=6)
+        #continue
     else:
         plt.plot(group.x, group.y, 'o', markersize=14)
 
