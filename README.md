@@ -1,5 +1,7 @@
 # anec-corp-clusterization
 2nd year project
+
+Tamara Zdorova
 ***
 a_corp.py - создание корпуса анекдотов
 
