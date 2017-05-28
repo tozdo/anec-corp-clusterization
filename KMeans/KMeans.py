@@ -7,8 +7,7 @@ from matplotlib import rc
 import pandas as pd
 import os
 from collections import Counter
-from collections import OrderedDict
-from sklearn.preprocessing import StandardScaler
+
 
 contents = []
 pers = []
