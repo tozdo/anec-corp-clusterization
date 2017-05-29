@@ -49,7 +49,7 @@
             </h2>
             <p class="lead">Прежде всего, необходимо было собрать корпус анекдотов, имеющий разметку по персонажам.</p>
             <p class="lead"><a href="https://www.anekdot.ru/tags/" class="btn btn-default">Сайт</a>, с которого скачивались анекдоты.</p>
-            <p>Почему именно этот сайт?</a>
+            <p>Почему именно этот сайт?</p>
             <ul>
             <li>достаточно большой</li>
             <li>удобный</li>
@@ -98,6 +98,7 @@
                   <td>231</td>
                   </tr>
             </table>
+            <p>Как видно, количество анекдотов довольно сильно варьируется в зависимости от персонажа. Именно поэтому мы введем понятия "полная выборка" и "уменьшенная выборка". "Уменьшенная выборка" будет включать в себя по 150 анекдотов от каждого персонажа.</p>
         </div>
 
         <hr class="featurette-divider">
@@ -107,7 +108,7 @@
             <h2 class="featurette-heading">Лемматизация
             </h2>
             <p class="lead"><a href="https://tech.yandex.ru/mystem/" class="btn btn-default">Mystem</a>, с помощью которого связные тексты анекдотов были преобразованы в наборы лемм.</p>
-            <p>Что умеет делать:</a>
+            <p>Что умеет делать:</p>
             <ul>
                 <li>строить гипотетические разборы для несловарных слов</li>
                 <li>определять часть речи</li>
@@ -125,7 +126,7 @@
             <p class="lead">Мы использовали три метода кластеризации: KMeans, Meanshift, DBSCAN.</p>
             <p><b>KMeans</b>: стремится минимизировать суммарное квадратичное отклонение точек кластеров от центров этих кластеров. Необходимо указать количество кластеров.</p>
             <p><b>MeanShift</b>: ищет центроиды, формирует кластеры вокруг них. </p>
-            <p><b>DBSCAN</b>: считает кластерами большие скопления точек, области всокой плотности.</p>
+            <p><b>DBSCAN</b>: считает кластерами большие скопления точек, области всокой плотности. Точки, не попавшие в кластеры, помечает как шум. Требует большого объема данных; при использовании уменьшенной выборки кластеров не выделял.</p>
             
         </div>
 
@@ -136,6 +137,16 @@
             <h2 class="featurette-heading">Визуализация
             </h2>
             <p class="lead">Для визуализации была использована библиотека <a href="https://matplotlib.org/" class="btn btn-default">matplotlib</a>.</p>
+            <p class="lead">Результаты работы алгоритма KMeans.</p>
+           <p>Уменьшенная выборка, 6 кластеров:</p> <img src="KMeans/6_clustersKM_150.png" alt="6_clustersKM_150">
+           <p>Уменьшенная выборка, 11 кластеров:</p> <img src="KMeans/11_clustersKM_150.png" alt="11_clustersKM_150">
+           <p>Полная выборка, 6 кластеров:</p> <img src="KMeans/6_clustersKM_all.png" alt="6_clustersKM_all">
+           <p>Полная выборка, 11 кластеров:</p> <img src="KMeans/11_clustersKM_all.png" alt="11_clustersKM_all">
+           <p class="lead">Результаты работы алгоритма MeanShift.</p>
+           <p>Уменьшенная выборка:</p> <img src="MeanShift/MeanShiftcluster_150.png" alt="MeanShiftcluster_150">
+           <p>Полная выборка:</p> <img src="MeanShift/MeanShiftcluster_all.png" alt="MeanShiftcluster_all">
+           <p class="lead">Результаты работы алгоритма DBSCAN.</p>
+           <p>Полная выборка:</p> <img src="DBSCAN/DBSCAN_cluster_all.png" alt="DBSCAN_cluster_all">
         </div>
 
         <hr class="featurette-divider">
@@ -143,7 +154,7 @@
        <!-- Fiveth Featurette -->
        <div class="featurette" id="contact">
             <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
-            <h2 class="featurette-heading">Результаты
+            <h2 class="featurette-heading">Наблюдения
             </h2>
             <p class="lead">Хорошо выделяются Штирлиц, Ржевский.</p>
             <p class="lead">Путин, Медведев и Обама часто попадают в один кластер.</p>
