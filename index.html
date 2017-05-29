@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Кластеризация корпуса анекдотов</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Full Width Image Header -->
+    <header class="header-image">
+        <div class="headline">
+            <div class="container">
+                <h1>Кластеризация корпуса анекдотов</h1>
+                <h2>Тамара Здорова, БКЛ153</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <hr class="featurette-divider">
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <h2 class="featurette-heading">Создание корпуса анекдотов
+            </h2>
+            <p class="lead">Прежде всего, необходимо было собрать корпус анекдотов, имеющий разметку по персонажам.</p>
+            <p class="lead"><a href="https://www.anekdot.ru/tags/" class="btn btn-default">Сайт</a>, с которого скачивались анекдоты.</p>
+            <p>Почему именно этот сайт?</a>
+            <ul>
+            <li>достаточно большой</li>
+            <li>удобный</li>
+            <li>есть тэги с персонажами</li>
+            </ul>
+            <h1>Полученные данные:</h1>
+            <table border="1" width="50%" height="130">
+                  <tr>
+                  <td><b>Персонаж</b></td>
+                  <td><b>Количество анекдотов</b></td>
+                  <td><b>Персонаж</b></td>
+                  <td><b>Количество анекдотов</b></td>
+                  </tr>
+                  <tr>
+                  <td>Абрамович</td>
+                  <td>152</td>
+                  <td>Дед Мороз</td>
+                  <td>273</td>
+                  </tr>
+                  <tr>
+                  <td>Штирлиц</td>
+                  <td>152</td>
+                  <td>Рабинович</td>
+                  <td>539</td>
+                  </tr>
+                  <tr>
+                  <td>Валуев</td>
+                  <td>164</td>
+                  <td>Медведев</td>
+                  <td>557</td>
+                  </tr>
+                  <tr>
+                  <td>Обама</td>
+                  <td>166</td>
+                  <td>Вовочка</td>
+                  <td>1146</td>
+                  </tr>
+                  <tr>
+                  <td>Буратино</td>
+                  <td>168</td>
+                  <td>Путин</td>
+                  <td>1187</td>
+                  </tr>  
+                  <tr>
+                  <td>Ржевский</td>
+                  <td>231</td>
+                  </tr>
+            </table>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Second Featurette -->
+        <div class="featurette" id="services">
+            <h2 class="featurette-heading">Лемматизация
+            </h2>
+            <p class="lead"><a href="https://tech.yandex.ru/mystem/" class="btn btn-default">Mystem</a>, с помощью которого связные тексты анекдотов были преобразованы в наборы лемм.</p>
+            <p>Что умеет делать:</a>
+            <ul>
+                <li>строить гипотетические разборы для несловарных слов</li>
+                <li>определять часть речи</li>
+                <li>снимать омонимию</li>
+            </ul>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Third Featurette -->
+        <div class="featurette" id="contact">
+            <h2 class="featurette-heading">Кластеризация
+            </h2>
+            <p class="lead">Для кластеризации понадобилась библиотека <a href="http://scikit-learn.org/stable/" class="btn btn-default">scikit-learn</a>.</p>
+            <p class="lead">Мы использовали три метода кластеризации: KMeans, Meanshift, DBSCAN.</p>
+            <p><b>KMeans</b>: стремится минимизировать суммарное квадратичное отклонение точек кластеров от центров этих кластеров. Необходимо указать количество кластеров.</p>
+            <p><b>MeanShift</b>: ищет центроиды, формирует кластеры вокруг них. </p>
+            <p><b>DBSCAN</b>: считает кластерами большие скопления точек, области всокой плотности.</p>
+            
+        </div>
+
+        <hr class="featurette-divider">
+
+       <!-- Fourth Featurette -->
+       <div class="featurette" id="contact">
+            <h2 class="featurette-heading">Визуализация
+            </h2>
+            <p class="lead">Для визуализации была использована библиотека <a href="https://matplotlib.org/" class="btn btn-default">matplotlib</a>.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+       <!-- Fiveth Featurette -->
+       <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+            <h2 class="featurette-heading">Результаты
+            </h2>
+            <p class="lead">Хорошо выделяются Штирлиц, Ржевский.</p>
+            <p class="lead">Путин, Медведев и Обама часто попадают в один кластер.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+       <!-- Sixth Featurette -->
+       <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+            <h2 class="featurette-heading">Литература и ссылки
+            </h2>
+            <p class="lead"></p>
+            <p>Использованная литература:</p>
+                <ul>
+                    <li>Д. Д. Амоголонова. Современный бурятский анекдот в конструировании этносферы // <i>Этнографическое обозрение.</i> М., 2008. С. 159-170.</li>
+                    <li>А. А. Демичев. Юридический анекдот XVIII - первой половины XIX века как источник по истории российской ментальности// <i> Российская история. </i> М., 2010, С. 137-153.</li>
+                    <li>Л. Сюэфен. Языковая игра в русском анекдоте// <i>Русская речь.</i> М., 2007. С. 56-60.</li>
+                    <li>В. В. Химик. Анекдот как уникальное явление русской речевой культуры // <i>Анекдот как феномен культуры: Материалы "круглого стола" 16 ноября 2002 г.</i> СПб., 2002. С. 17 - 31.</li>
+                    <li>David T. Armstrong. “Anecdotes as Teaching Devices.” // <i>The Journal of Education. </i> 1946. P. 280–282. </li>
+                    <li>Nadine Thielemann. “Arguing by ‘Anekdot’ – Humorous Accounts in Russian Media Interaction.” // <i>Zeitschrift Für Slavische Philologie. </i>2010. P. 185–215.</li>
+                </ul>
+                <p><i class="fa fa-fw fa-github"></i> Код находится <a href="https://github.com/tozdo/anec-corp-clucterization">здесь</a>.</p>
+                <p><i class="fa fa-fw fa-file-pdf-o"></i> Файл с <a href="poster.pdf">постером</a>.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
