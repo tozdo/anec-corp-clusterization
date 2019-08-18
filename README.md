@@ -1,7 +1,7 @@
 # anec-corp-clusterization
 2nd year project
 
-[site](tozdo.github.io/anec-corp-clusterization)
+[site](https://tozdo.github.io/anec-corp-clusterization)
 
 ***
 a_corp.py - создание корпуса анекдотов
