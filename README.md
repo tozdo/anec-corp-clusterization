@@ -2,7 +2,7 @@
 2nd year project
 
 tozdo.github.io/anec-corp-clusterization
-Tamara Zdorova
+
 ***
 a_corp.py - создание корпуса анекдотов
 
